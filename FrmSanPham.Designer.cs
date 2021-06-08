@@ -242,9 +242,9 @@ namespace EDCZONE
             this.btnThoat.ForeColor = System.Drawing.Color.DarkBlue;
             this.btnThoat.Image = global::EDCZONE.Properties.Resources.s_cancel1;
             this.btnThoat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnThoat.Location = new System.Drawing.Point(832, 32);
+            this.btnThoat.Location = new System.Drawing.Point(837, 32);
             this.btnThoat.Name = "btnThoat";
-            this.btnThoat.Size = new System.Drawing.Size(92, 37);
+            this.btnThoat.Size = new System.Drawing.Size(100, 37);
             this.btnThoat.TabIndex = 5;
             this.btnThoat.Text = "&Thoát";
             this.btnThoat.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -259,7 +259,7 @@ namespace EDCZONE
             this.btnHuy.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnHuy.Location = new System.Drawing.Point(680, 32);
             this.btnHuy.Name = "btnHuy";
-            this.btnHuy.Size = new System.Drawing.Size(113, 37);
+            this.btnHuy.Size = new System.Drawing.Size(121, 37);
             this.btnHuy.TabIndex = 4;
             this.btnHuy.Text = "&Hủy SP";
             this.btnHuy.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -274,7 +274,7 @@ namespace EDCZONE
             this.btnLuu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnLuu.Location = new System.Drawing.Point(534, 32);
             this.btnLuu.Name = "btnLuu";
-            this.btnLuu.Size = new System.Drawing.Size(108, 37);
+            this.btnLuu.Size = new System.Drawing.Size(121, 37);
             this.btnLuu.TabIndex = 3;
             this.btnLuu.Text = "&Lưu SP";
             this.btnLuu.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -287,9 +287,9 @@ namespace EDCZONE
             this.btnXoa.ForeColor = System.Drawing.Color.DarkBlue;
             this.btnXoa.Image = global::EDCZONE.Properties.Resources.delete_row_32x34;
             this.btnXoa.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnXoa.Location = new System.Drawing.Point(373, 32);
+            this.btnXoa.Location = new System.Drawing.Point(390, 32);
             this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(116, 37);
+            this.btnXoa.Size = new System.Drawing.Size(138, 37);
             this.btnXoa.TabIndex = 2;
             this.btnXoa.Text = "&Xóa SP";
             this.btnXoa.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -302,9 +302,9 @@ namespace EDCZONE
             this.btnSua.ForeColor = System.Drawing.Color.DarkBlue;
             this.btnSua.Image = global::EDCZONE.Properties.Resources.add_point_on;
             this.btnSua.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSua.Location = new System.Drawing.Point(220, 32);
+            this.btnSua.Location = new System.Drawing.Point(231, 32);
             this.btnSua.Name = "btnSua";
-            this.btnSua.Size = new System.Drawing.Size(113, 37);
+            this.btnSua.Size = new System.Drawing.Size(136, 37);
             this.btnSua.TabIndex = 1;
             this.btnSua.Text = "&Sửa SP";
             this.btnSua.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -319,7 +319,7 @@ namespace EDCZONE
             this.btnThem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnThem.Location = new System.Drawing.Point(63, 32);
             this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(119, 37);
+            this.btnThem.Size = new System.Drawing.Size(141, 37);
             this.btnThem.TabIndex = 0;
             this.btnThem.Text = "&Thêm SP";
             this.btnThem.TextAlign = System.Drawing.ContentAlignment.MiddleRight;

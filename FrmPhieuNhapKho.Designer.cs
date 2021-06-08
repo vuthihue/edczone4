@@ -30,18 +30,16 @@ namespace EDCZONE
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.NhanVien = new System.Windows.Forms.Label();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.button1 = new System.Windows.Forms.Button();
             this.dtpNgayBan = new System.Windows.Forms.DateTimePicker();
             this.label5 = new System.Windows.Forms.Label();
-            this.MaNV = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MaNCC = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MaHang = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SoLuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DonGiaNhap = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DonGiaBan = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnThoat = new System.Windows.Forms.Button();
+            this.btnIn = new System.Windows.Forms.Button();
+            this.btnxemhd = new System.Windows.Forms.Button();
+            this.btnxacnhan = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -56,24 +54,7 @@ namespace EDCZONE
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(861, 89);
             this.panel1.TabIndex = 0;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.MaNV,
-            this.MaNCC,
-            this.MaHang,
-            this.SoLuong,
-            this.DonGiaNhap,
-            this.DonGiaBan});
-            this.dataGridView1.Location = new System.Drawing.Point(44, 248);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 62;
-            this.dataGridView1.RowTemplate.Height = 28;
-            this.dataGridView1.Size = new System.Drawing.Size(763, 225);
-            this.dataGridView1.TabIndex = 1;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // NhanVien
             // 
@@ -85,6 +66,17 @@ namespace EDCZONE
             this.NhanVien.Size = new System.Drawing.Size(245, 36);
             this.NhanVien.TabIndex = 28;
             this.NhanVien.Text = "Phiếu Nhập Kho";
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(44, 248);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 62;
+            this.dataGridView1.RowTemplate.Height = 28;
+            this.dataGridView1.Size = new System.Drawing.Size(763, 225);
+            this.dataGridView1.TabIndex = 1;
             // 
             // groupBox1
             // 
@@ -114,6 +106,7 @@ namespace EDCZONE
             this.button1.Text = "&Tìm Kiếm";
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // dtpNgayBan
             // 
@@ -134,53 +127,79 @@ namespace EDCZONE
             this.label5.TabIndex = 17;
             this.label5.Text = "Chọn ngày:";
             // 
-            // MaNV
+            // btnThoat
             // 
-            this.MaNV.HeaderText = "Mã NV";
-            this.MaNV.MinimumWidth = 8;
-            this.MaNV.Name = "MaNV";
+            this.btnThoat.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThoat.ForeColor = System.Drawing.Color.DarkBlue;
+            this.btnThoat.Image = global::EDCZONE.Properties.Resources.s_cancel1;
+            this.btnThoat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnThoat.Location = new System.Drawing.Point(673, 511);
+            this.btnThoat.Name = "btnThoat";
+            this.btnThoat.Size = new System.Drawing.Size(127, 37);
+            this.btnThoat.TabIndex = 11;
+            this.btnThoat.Text = "&Thoát";
+            this.btnThoat.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnThoat.UseVisualStyleBackColor = true;
             // 
-            // MaNCC
+            // btnIn
             // 
-            this.MaNCC.HeaderText = "Mã NCC";
-            this.MaNCC.MinimumWidth = 8;
-            this.MaNCC.Name = "MaNCC";
+            this.btnIn.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnIn.ForeColor = System.Drawing.Color.DarkBlue;
+            this.btnIn.Image = global::EDCZONE.Properties.Resources.save;
+            this.btnIn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnIn.Location = new System.Drawing.Point(496, 511);
+            this.btnIn.Name = "btnIn";
+            this.btnIn.Size = new System.Drawing.Size(155, 37);
+            this.btnIn.TabIndex = 10;
+            this.btnIn.Text = "&In Hóa Đơn";
+            this.btnIn.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnIn.UseVisualStyleBackColor = true;
+            this.btnIn.Click += new System.EventHandler(this.btnIn_Click);
             // 
-            // MaHang
+            // btnxemhd
             // 
-            this.MaHang.HeaderText = "Mã Hàng";
-            this.MaHang.MinimumWidth = 8;
-            this.MaHang.Name = "MaHang";
+            this.btnxemhd.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnxemhd.ForeColor = System.Drawing.Color.DarkBlue;
+            this.btnxemhd.Image = global::EDCZONE.Properties.Resources.view_report;
+            this.btnxemhd.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnxemhd.Location = new System.Drawing.Point(94, 511);
+            this.btnxemhd.Name = "btnxemhd";
+            this.btnxemhd.Size = new System.Drawing.Size(180, 37);
+            this.btnxemhd.TabIndex = 9;
+            this.btnxemhd.Text = "&Xem Hóa Đơn";
+            this.btnxemhd.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnxemhd.UseVisualStyleBackColor = true;
             // 
-            // SoLuong
+            // btnxacnhan
             // 
-            this.SoLuong.HeaderText = "Số Lượng";
-            this.SoLuong.MinimumWidth = 8;
-            this.SoLuong.Name = "SoLuong";
-            // 
-            // DonGiaNhap
-            // 
-            this.DonGiaNhap.HeaderText = "Đơn Giá Nhập";
-            this.DonGiaNhap.MinimumWidth = 8;
-            this.DonGiaNhap.Name = "DonGiaNhap";
-            // 
-            // DonGiaBan
-            // 
-            this.DonGiaBan.HeaderText = "Đơn Giá Bán";
-            this.DonGiaBan.MinimumWidth = 8;
-            this.DonGiaBan.Name = "DonGiaBan";
+            this.btnxacnhan.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnxacnhan.ForeColor = System.Drawing.Color.DarkBlue;
+            this.btnxacnhan.Image = global::EDCZONE.Properties.Resources.okind_active;
+            this.btnxacnhan.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnxacnhan.Location = new System.Drawing.Point(297, 511);
+            this.btnxacnhan.Name = "btnxacnhan";
+            this.btnxacnhan.Size = new System.Drawing.Size(173, 37);
+            this.btnxacnhan.TabIndex = 8;
+            this.btnxacnhan.Text = "&Xác Nhận HĐ";
+            this.btnxacnhan.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnxacnhan.UseVisualStyleBackColor = true;
             // 
             // FrmPhieuNhapKho
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(861, 530);
+            this.ClientSize = new System.Drawing.Size(861, 579);
+            this.Controls.Add(this.btnThoat);
+            this.Controls.Add(this.btnIn);
+            this.Controls.Add(this.btnxemhd);
+            this.Controls.Add(this.btnxacnhan);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.panel1);
             this.Name = "FrmPhieuNhapKho";
             this.Text = "FrmPhieuNhapKho";
+            this.Load += new System.EventHandler(this.FrmPhieuNhapKho_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -195,15 +214,13 @@ namespace EDCZONE
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label NhanVien;
-        private System.Windows.Forms.DataGridViewTextBoxColumn MaNV;
-        private System.Windows.Forms.DataGridViewTextBoxColumn MaNCC;
-        private System.Windows.Forms.DataGridViewTextBoxColumn MaHang;
-        private System.Windows.Forms.DataGridViewTextBoxColumn SoLuong;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DonGiaNhap;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DonGiaBan;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.DateTimePicker dtpNgayBan;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button btnThoat;
+        private System.Windows.Forms.Button btnIn;
+        private System.Windows.Forms.Button btnxemhd;
+        private System.Windows.Forms.Button btnxacnhan;
     }
 }

@@ -30,39 +30,96 @@ namespace EDCZONE
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnthoat = new System.Windows.Forms.Button();
+            this.btnIn = new System.Windows.Forms.Button();
+            this.btnxemhoadon = new System.Windows.Forms.Button();
+            this.btnxacnhan = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.NhanVien = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btntimkiem = new System.Windows.Forms.Button();
             this.dtpNgayBan = new System.Windows.Forms.DateTimePicker();
             this.label5 = new System.Windows.Forms.Label();
-            this.MaNV = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgv_phieuxuatkho = new System.Windows.Forms.DataGridView();
             this.MaDH = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MaKH = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MaVC = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_phieuxuatkho)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.panel1.Controls.Add(this.button5);
-            this.panel1.Controls.Add(this.button4);
-            this.panel1.Controls.Add(this.button3);
-            this.panel1.Controls.Add(this.button2);
+            this.panel1.Controls.Add(this.btnthoat);
+            this.panel1.Controls.Add(this.btnIn);
+            this.panel1.Controls.Add(this.btnxemhoadon);
+            this.panel1.Controls.Add(this.btnxacnhan);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel1.Location = new System.Drawing.Point(0, 493);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(905, 100);
             this.panel1.TabIndex = 0;
+            // 
+            // btnthoat
+            // 
+            this.btnthoat.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnthoat.ForeColor = System.Drawing.Color.DarkBlue;
+            this.btnthoat.Image = global::EDCZONE.Properties.Resources.s_cancel1;
+            this.btnthoat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnthoat.Location = new System.Drawing.Point(676, 32);
+            this.btnthoat.Name = "btnthoat";
+            this.btnthoat.Size = new System.Drawing.Size(123, 37);
+            this.btnthoat.TabIndex = 7;
+            this.btnthoat.Text = "&Thoát";
+            this.btnthoat.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnthoat.UseVisualStyleBackColor = true;
+            this.btnthoat.Click += new System.EventHandler(this.btnthoat_Click);
+            // 
+            // btnIn
+            // 
+            this.btnIn.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnIn.ForeColor = System.Drawing.Color.DarkBlue;
+            this.btnIn.Image = global::EDCZONE.Properties.Resources.save;
+            this.btnIn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnIn.Location = new System.Drawing.Point(500, 32);
+            this.btnIn.Name = "btnIn";
+            this.btnIn.Size = new System.Drawing.Size(157, 37);
+            this.btnIn.TabIndex = 6;
+            this.btnIn.Text = "&In Hóa Đơn";
+            this.btnIn.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnIn.UseVisualStyleBackColor = true;
+            this.btnIn.Click += new System.EventHandler(this.btnIn_Click);
+            // 
+            // btnxemhoadon
+            // 
+            this.btnxemhoadon.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnxemhoadon.ForeColor = System.Drawing.Color.DarkBlue;
+            this.btnxemhoadon.Image = global::EDCZONE.Properties.Resources.view_report;
+            this.btnxemhoadon.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnxemhoadon.Location = new System.Drawing.Point(97, 32);
+            this.btnxemhoadon.Name = "btnxemhoadon";
+            this.btnxemhoadon.Size = new System.Drawing.Size(180, 37);
+            this.btnxemhoadon.TabIndex = 5;
+            this.btnxemhoadon.Text = "&Xem Hóa Đơn";
+            this.btnxemhoadon.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnxemhoadon.UseVisualStyleBackColor = true;
+            // 
+            // btnxacnhan
+            // 
+            this.btnxacnhan.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnxacnhan.ForeColor = System.Drawing.Color.DarkBlue;
+            this.btnxacnhan.Image = global::EDCZONE.Properties.Resources.okind_active;
+            this.btnxacnhan.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnxacnhan.Location = new System.Drawing.Point(300, 32);
+            this.btnxacnhan.Name = "btnxacnhan";
+            this.btnxacnhan.Size = new System.Drawing.Size(176, 37);
+            this.btnxacnhan.TabIndex = 4;
+            this.btnxacnhan.Text = "&Xác Nhận HĐ";
+            this.btnxacnhan.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnxacnhan.UseVisualStyleBackColor = true;
             // 
             // panel2
             // 
@@ -74,10 +131,21 @@ namespace EDCZONE
             this.panel2.Size = new System.Drawing.Size(905, 85);
             this.panel2.TabIndex = 1;
             // 
+            // NhanVien
+            // 
+            this.NhanVien.AutoSize = true;
+            this.NhanVien.Font = new System.Drawing.Font("Times New Roman", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NhanVien.ForeColor = System.Drawing.Color.DarkBlue;
+            this.NhanVien.Location = new System.Drawing.Point(294, 32);
+            this.NhanVien.Name = "NhanVien";
+            this.NhanVien.Size = new System.Drawing.Size(238, 36);
+            this.NhanVien.TabIndex = 27;
+            this.NhanVien.Text = "Phiếu Xuất Kho";
+            // 
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.groupBox1.Controls.Add(this.button1);
+            this.groupBox1.Controls.Add(this.btntimkiem);
             this.groupBox1.Controls.Add(this.dtpNgayBan);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -89,32 +157,20 @@ namespace EDCZONE
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thực hiện";
             // 
-            // dataGridView1
+            // btntimkiem
             // 
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.MaNV,
-            this.MaDH,
-            this.MaKH,
-            this.MaVC});
-            this.dataGridView1.Location = new System.Drawing.Point(56, 252);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 62;
-            this.dataGridView1.RowTemplate.Height = 28;
-            this.dataGridView1.Size = new System.Drawing.Size(756, 197);
-            this.dataGridView1.TabIndex = 3;
-            // 
-            // NhanVien
-            // 
-            this.NhanVien.AutoSize = true;
-            this.NhanVien.Font = new System.Drawing.Font("Times New Roman", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NhanVien.ForeColor = System.Drawing.Color.DarkBlue;
-            this.NhanVien.Location = new System.Drawing.Point(294, 32);
-            this.NhanVien.Name = "NhanVien";
-            this.NhanVien.Size = new System.Drawing.Size(238, 36);
-            this.NhanVien.TabIndex = 27;
-            this.NhanVien.Text = "Phiếu Xuất Kho";
+            this.btntimkiem.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btntimkiem.ForeColor = System.Drawing.Color.DarkBlue;
+            this.btntimkiem.Image = global::EDCZONE.Properties.Resources.b_search;
+            this.btntimkiem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btntimkiem.Location = new System.Drawing.Point(522, 45);
+            this.btntimkiem.Name = "btntimkiem";
+            this.btntimkiem.Size = new System.Drawing.Size(121, 33);
+            this.btntimkiem.TabIndex = 19;
+            this.btntimkiem.Text = "&Tìm Kiếm";
+            this.btntimkiem.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btntimkiem.UseVisualStyleBackColor = true;
+            this.btntimkiem.Click += new System.EventHandler(this.btntimkiem_Click);
             // 
             // dtpNgayBan
             // 
@@ -135,11 +191,20 @@ namespace EDCZONE
             this.label5.TabIndex = 17;
             this.label5.Text = "Chọn ngày:";
             // 
-            // MaNV
+            // dgv_phieuxuatkho
             // 
-            this.MaNV.HeaderText = "Mã NV";
-            this.MaNV.MinimumWidth = 8;
-            this.MaNV.Name = "MaNV";
+            this.dgv_phieuxuatkho.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgv_phieuxuatkho.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_phieuxuatkho.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.MaDH,
+            this.MaKH,
+            this.MaVC});
+            this.dgv_phieuxuatkho.Location = new System.Drawing.Point(56, 252);
+            this.dgv_phieuxuatkho.Name = "dgv_phieuxuatkho";
+            this.dgv_phieuxuatkho.RowHeadersWidth = 62;
+            this.dgv_phieuxuatkho.RowTemplate.Height = 28;
+            this.dgv_phieuxuatkho.Size = new System.Drawing.Size(756, 197);
+            this.dgv_phieuxuatkho.TabIndex = 3;
             // 
             // MaDH
             // 
@@ -159,83 +224,13 @@ namespace EDCZONE
             this.MaVC.MinimumWidth = 8;
             this.MaVC.Name = "MaVC";
             // 
-            // button1
-            // 
-            this.button1.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.DarkBlue;
-            this.button1.Image = global::EDCZONE.Properties.Resources.b_search;
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(522, 45);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(121, 33);
-            this.button1.TabIndex = 19;
-            this.button1.Text = "&Tìm Kiếm";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // button5
-            // 
-            this.button5.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.ForeColor = System.Drawing.Color.DarkBlue;
-            this.button5.Image = global::EDCZONE.Properties.Resources.s_cancel1;
-            this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button5.Location = new System.Drawing.Point(676, 32);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(89, 37);
-            this.button5.TabIndex = 7;
-            this.button5.Text = "&Thoát";
-            this.button5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button5.UseVisualStyleBackColor = true;
-            // 
-            // button4
-            // 
-            this.button4.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.Color.DarkBlue;
-            this.button4.Image = global::EDCZONE.Properties.Resources.save;
-            this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.Location = new System.Drawing.Point(500, 32);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(136, 37);
-            this.button4.TabIndex = 6;
-            this.button4.Text = "&In Hóa Đơn";
-            this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button4.UseVisualStyleBackColor = true;
-            // 
-            // button3
-            // 
-            this.button3.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.DarkBlue;
-            this.button3.Image = global::EDCZONE.Properties.Resources.view_report;
-            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(97, 32);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(161, 37);
-            this.button3.TabIndex = 5;
-            this.button3.Text = "&Xem Hóa Đơn";
-            this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.DarkBlue;
-            this.button2.Image = global::EDCZONE.Properties.Resources.okind_active;
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(300, 32);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(155, 37);
-            this.button2.TabIndex = 4;
-            this.button2.Text = "&Xác Nhận HĐ";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button2.UseVisualStyleBackColor = true;
-            // 
             // FrmPhieuXuatKho
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(905, 593);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgv_phieuxuatkho);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
@@ -246,7 +241,7 @@ namespace EDCZONE
             this.panel2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_phieuxuatkho)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -256,16 +251,15 @@ namespace EDCZONE
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgv_phieuxuatkho;
         private System.Windows.Forms.Label NhanVien;
         private System.Windows.Forms.DateTimePicker dtpNgayBan;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn MaNV;
+        private System.Windows.Forms.Button btnthoat;
+        private System.Windows.Forms.Button btnIn;
+        private System.Windows.Forms.Button btnxemhoadon;
+        private System.Windows.Forms.Button btnxacnhan;
+        private System.Windows.Forms.Button btntimkiem;
         private System.Windows.Forms.DataGridViewTextBoxColumn MaDH;
         private System.Windows.Forms.DataGridViewTextBoxColumn MaKH;
         private System.Windows.Forms.DataGridViewTextBoxColumn MaVC;

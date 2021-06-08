@@ -83,8 +83,6 @@ namespace EDCZONE
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.txtDVT = new System.Windows.Forms.TextBox();
-            this.label18 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -116,9 +114,9 @@ namespace EDCZONE
             this.btnLuuHD.ForeColor = System.Drawing.Color.DarkBlue;
             this.btnLuuHD.Image = global::EDCZONE.Properties.Resources.b_save;
             this.btnLuuHD.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLuuHD.Location = new System.Drawing.Point(368, 23);
+            this.btnLuuHD.Location = new System.Drawing.Point(356, 23);
             this.btnLuuHD.Name = "btnLuuHD";
-            this.btnLuuHD.Size = new System.Drawing.Size(87, 37);
+            this.btnLuuHD.Size = new System.Drawing.Size(120, 37);
             this.btnLuuHD.TabIndex = 16;
             this.btnLuuHD.Text = "&Lưu HĐ";
             this.btnLuuHD.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -131,9 +129,9 @@ namespace EDCZONE
             this.btnXoaHĐ.ForeColor = System.Drawing.Color.DarkBlue;
             this.btnXoaHĐ.Image = global::EDCZONE.Properties.Resources.delete_row_32x34;
             this.btnXoaHĐ.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnXoaHĐ.Location = new System.Drawing.Point(475, 23);
+            this.btnXoaHĐ.Location = new System.Drawing.Point(485, 23);
             this.btnXoaHĐ.Name = "btnXoaHĐ";
-            this.btnXoaHĐ.Size = new System.Drawing.Size(116, 37);
+            this.btnXoaHĐ.Size = new System.Drawing.Size(143, 37);
             this.btnXoaHĐ.TabIndex = 15;
             this.btnXoaHĐ.Text = "&Xóa HĐ";
             this.btnXoaHĐ.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -147,7 +145,7 @@ namespace EDCZONE
             this.btnThemHĐ.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnThemHĐ.Location = new System.Drawing.Point(61, 23);
             this.btnThemHĐ.Name = "btnThemHĐ";
-            this.btnThemHĐ.Size = new System.Drawing.Size(119, 37);
+            this.btnThemHĐ.Size = new System.Drawing.Size(141, 37);
             this.btnThemHĐ.TabIndex = 14;
             this.btnThemHĐ.Text = "&Thêm HĐ";
             this.btnThemHĐ.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -160,7 +158,7 @@ namespace EDCZONE
             this.btnInHĐ.ForeColor = System.Drawing.Color.DarkBlue;
             this.btnInHĐ.Image = global::EDCZONE.Properties.Resources.b_save;
             this.btnInHĐ.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnInHĐ.Location = new System.Drawing.Point(597, 23);
+            this.btnInHĐ.Location = new System.Drawing.Point(652, 23);
             this.btnInHĐ.Name = "btnInHĐ";
             this.btnInHĐ.Size = new System.Drawing.Size(105, 37);
             this.btnInHĐ.TabIndex = 13;
@@ -174,9 +172,9 @@ namespace EDCZONE
             this.btnSua.ForeColor = System.Drawing.Color.DarkBlue;
             this.btnSua.Image = global::EDCZONE.Properties.Resources.add_point_on;
             this.btnSua.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSua.Location = new System.Drawing.Point(199, 23);
+            this.btnSua.Location = new System.Drawing.Point(208, 23);
             this.btnSua.Name = "btnSua";
-            this.btnSua.Size = new System.Drawing.Size(123, 37);
+            this.btnSua.Size = new System.Drawing.Size(138, 37);
             this.btnSua.TabIndex = 12;
             this.btnSua.Text = "&Sửa HĐ";
             this.btnSua.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -441,8 +439,6 @@ namespace EDCZONE
             // groupBox2
             // 
             this.groupBox2.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.groupBox2.Controls.Add(this.txtDVT);
-            this.groupBox2.Controls.Add(this.label18);
             this.groupBox2.Controls.Add(this.lblBangChu);
             this.groupBox2.Controls.Add(this.btnIn);
             this.groupBox2.Controls.Add(this.label19);
@@ -607,7 +603,7 @@ namespace EDCZONE
             // 
             // txtDonGia
             // 
-            this.txtDonGia.Location = new System.Drawing.Point(387, 37);
+            this.txtDonGia.Location = new System.Drawing.Point(423, 31);
             this.txtDonGia.Name = "txtDonGia";
             this.txtDonGia.Size = new System.Drawing.Size(156, 32);
             this.txtDonGia.TabIndex = 19;
@@ -717,24 +713,6 @@ namespace EDCZONE
             this.label10.TabIndex = 4;
             this.label10.Text = "Số lượng";
             // 
-            // txtDVT
-            // 
-            this.txtDVT.Location = new System.Drawing.Point(408, 0);
-            this.txtDVT.Name = "txtDVT";
-            this.txtDVT.Size = new System.Drawing.Size(156, 32);
-            this.txtDVT.TabIndex = 33;
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label18.Location = new System.Drawing.Point(304, 6);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(82, 22);
-            this.label18.TabIndex = 32;
-            this.label18.Text = "Số lượng";
-            // 
             // FrmHoaDonBan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -817,7 +795,5 @@ namespace EDCZONE
         private System.Windows.Forms.Button btnXoaHĐ;
         private System.Windows.Forms.Button btnThemHĐ;
         private System.Windows.Forms.Button btnLuuHD;
-        private System.Windows.Forms.TextBox txtDVT;
-        private System.Windows.Forms.Label label18;
     }
 }

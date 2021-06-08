@@ -58,7 +58,8 @@ namespace EDCZONE
         private void LoadDataGridView()
         {
             string sql;
-            sql = "SELECT a.MaSP, b.TenSP, a.SoLuong, b.DonGia,a.DVT, a.GiamGia,a.ThanhTien FROM tblchitiethoadonban AS a, tblsanpham AS b WHERE a.MaHDB = '" + txtSoHDB.Text + "' AND a.MaSP=b.MaSP";
+
+            sql = "SELECT* FROM tblchitiethoadonban";
             tblcthdb = Functions.GetDataToTable(sql);
             dataGridView_HDB.DataSource = tblcthdb;
             dataGridView_HDB.AllowUserToAddRows = false;
@@ -135,7 +136,7 @@ namespace EDCZONE
                 return;
             }
 
-            sql = "INSERT INTO tblchitiethoadoanban(MaHDB,MaSP,DonGiaBan,DVT,SoLuong,GiamGia,ThanhTien) VALUES(N'" + txtSoHDB.Text.Trim() + "','" + cboMaSP.SelectedValue + "','" + txtSoLuong.Text + "','" + txtDonGia.Text + "','" + txtDVT.Text + "','" + txtGiamGia.Text + "','" + txtThanhTien.Text + "')";
+            sql = "INSERT INTO tblchitiethoadoanban(MaHDB,MaSP,DonGiaBan,SoLuong,GiamGia,ThanhTien) VALUES(N'" + txtSoHDB.Text.Trim() + "','" + cboMaSP.SelectedValue + "','" + txtSoLuong.Text + "','" + txtDonGia.Text + "','" + txtGiamGia.Text + "','" + txtThanhTien.Text + "')";
             Functions.RunSQL(sql);
             LoadDataGridView();
             // Cập nhật lại số lượng của mặt hàng vào bảng SanPham

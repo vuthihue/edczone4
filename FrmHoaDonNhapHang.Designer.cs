@@ -30,11 +30,12 @@ namespace EDCZONE
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnLuuHD = new System.Windows.Forms.Button();
+            this.btnXoaHĐ = new System.Windows.Forms.Button();
+            this.btnThemHĐ = new System.Windows.Forms.Button();
+            this.btnInHĐ = new System.Windows.Forms.Button();
+            this.btnSua = new System.Windows.Forms.Button();
+            this.btnThoat = new System.Windows.Forms.Button();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -45,7 +46,7 @@ namespace EDCZONE
             this.cboMaNCC = new System.Windows.Forms.ComboBox();
             this.cboMaNV = new System.Windows.Forms.ComboBox();
             this.txtTenNV = new System.Windows.Forms.TextBox();
-            this.txtSoHDB = new System.Windows.Forms.TextBox();
+            this.txtSoHDN = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -54,7 +55,7 @@ namespace EDCZONE
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label21 = new System.Windows.Forms.Label();
+            this.tlbBangChu = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.textTongTien = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -69,7 +70,7 @@ namespace EDCZONE
             this.txtTongTien = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
-            this.dataGridView_HDB = new System.Windows.Forms.DataGridView();
+            this.dataGridView_HDN = new System.Windows.Forms.DataGridView();
             this.MaSP = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TenGD = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SoLuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -95,90 +96,108 @@ namespace EDCZONE
             this.splitContainer1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_HDB)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_HDN)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.panel1.Controls.Add(this.button6);
-            this.panel1.Controls.Add(this.button4);
-            this.panel1.Controls.Add(this.button3);
-            this.panel1.Controls.Add(this.button2);
-            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.btnLuuHD);
+            this.panel1.Controls.Add(this.btnXoaHĐ);
+            this.panel1.Controls.Add(this.btnThemHĐ);
+            this.panel1.Controls.Add(this.btnInHĐ);
+            this.panel1.Controls.Add(this.btnSua);
+            this.panel1.Controls.Add(this.btnThoat);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel1.Location = new System.Drawing.Point(0, 654);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(980, 93);
             this.panel1.TabIndex = 0;
             // 
-            // button6
+            // btnLuuHD
             // 
-            this.button6.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.ForeColor = System.Drawing.Color.DarkBlue;
-            this.button6.Image = global::EDCZONE.Properties.Resources.s_cancel1;
-            this.button6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button6.Location = new System.Drawing.Point(789, 28);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(108, 37);
-            this.button6.TabIndex = 16;
-            this.button6.Text = "&Thoát";
-            this.button6.UseVisualStyleBackColor = true;
+            this.btnLuuHD.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLuuHD.ForeColor = System.Drawing.Color.DarkBlue;
+            this.btnLuuHD.Image = global::EDCZONE.Properties.Resources.b_save;
+            this.btnLuuHD.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnLuuHD.Location = new System.Drawing.Point(372, 28);
+            this.btnLuuHD.Name = "btnLuuHD";
+            this.btnLuuHD.Size = new System.Drawing.Size(120, 37);
+            this.btnLuuHD.TabIndex = 22;
+            this.btnLuuHD.Text = "&Lưu HĐ";
+            this.btnLuuHD.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnLuuHD.UseVisualStyleBackColor = true;
+            this.btnLuuHD.Click += new System.EventHandler(this.btnLuuHD_Click);
             // 
-            // button4
+            // btnXoaHĐ
             // 
-            this.button4.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.Color.DarkBlue;
-            this.button4.Image = global::EDCZONE.Properties.Resources.b_save;
-            this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.Location = new System.Drawing.Point(611, 28);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(111, 37);
-            this.button4.TabIndex = 15;
-            this.button4.Text = "&In HĐ";
-            this.button4.UseVisualStyleBackColor = true;
+            this.btnXoaHĐ.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnXoaHĐ.ForeColor = System.Drawing.Color.DarkBlue;
+            this.btnXoaHĐ.Image = global::EDCZONE.Properties.Resources.delete_row_32x34;
+            this.btnXoaHĐ.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnXoaHĐ.Location = new System.Drawing.Point(501, 28);
+            this.btnXoaHĐ.Name = "btnXoaHĐ";
+            this.btnXoaHĐ.Size = new System.Drawing.Size(143, 37);
+            this.btnXoaHĐ.TabIndex = 21;
+            this.btnXoaHĐ.Text = "&Xóa HĐ";
+            this.btnXoaHĐ.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnXoaHĐ.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // btnThemHĐ
             // 
-            this.button3.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.DarkBlue;
-            this.button3.Image = global::EDCZONE.Properties.Resources.delete_row_32x34;
-            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(432, 28);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(119, 37);
-            this.button3.TabIndex = 14;
-            this.button3.Text = "&Xóa HĐ";
-            this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnThemHĐ.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThemHĐ.ForeColor = System.Drawing.Color.DarkBlue;
+            this.btnThemHĐ.Image = global::EDCZONE.Properties.Resources.add_to_path1;
+            this.btnThemHĐ.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnThemHĐ.Location = new System.Drawing.Point(77, 28);
+            this.btnThemHĐ.Name = "btnThemHĐ";
+            this.btnThemHĐ.Size = new System.Drawing.Size(141, 37);
+            this.btnThemHĐ.TabIndex = 20;
+            this.btnThemHĐ.Text = "&Thêm HĐ";
+            this.btnThemHĐ.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnThemHĐ.UseVisualStyleBackColor = true;
+            this.btnThemHĐ.Click += new System.EventHandler(this.btnThemHĐ_Click);
             // 
-            // button2
+            // btnInHĐ
             // 
-            this.button2.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.DarkBlue;
-            this.button2.Image = global::EDCZONE.Properties.Resources.add_point_on;
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(260, 28);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(119, 37);
-            this.button2.TabIndex = 13;
-            this.button2.Text = "&Sửa HĐ";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnInHĐ.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInHĐ.ForeColor = System.Drawing.Color.DarkBlue;
+            this.btnInHĐ.Image = global::EDCZONE.Properties.Resources.b_save;
+            this.btnInHĐ.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnInHĐ.Location = new System.Drawing.Point(668, 28);
+            this.btnInHĐ.Name = "btnInHĐ";
+            this.btnInHĐ.Size = new System.Drawing.Size(105, 37);
+            this.btnInHĐ.TabIndex = 19;
+            this.btnInHĐ.Text = "&In HĐ";
+            this.btnInHĐ.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnInHĐ.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // btnSua
             // 
-            this.button1.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.DarkBlue;
-            this.button1.Image = global::EDCZONE.Properties.Resources.add_to_path1;
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(83, 28);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(119, 37);
-            this.button1.TabIndex = 12;
-            this.button1.Text = "&Thêm HĐ";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnSua.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSua.ForeColor = System.Drawing.Color.DarkBlue;
+            this.btnSua.Image = global::EDCZONE.Properties.Resources.add_point_on;
+            this.btnSua.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSua.Location = new System.Drawing.Point(224, 28);
+            this.btnSua.Name = "btnSua";
+            this.btnSua.Size = new System.Drawing.Size(138, 37);
+            this.btnSua.TabIndex = 18;
+            this.btnSua.Text = "&Sửa HĐ";
+            this.btnSua.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnSua.UseVisualStyleBackColor = true;
+            // 
+            // btnThoat
+            // 
+            this.btnThoat.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThoat.ForeColor = System.Drawing.Color.DarkBlue;
+            this.btnThoat.Image = global::EDCZONE.Properties.Resources.s_cancel1;
+            this.btnThoat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnThoat.Location = new System.Drawing.Point(795, 28);
+            this.btnThoat.Name = "btnThoat";
+            this.btnThoat.Size = new System.Drawing.Size(108, 37);
+            this.btnThoat.TabIndex = 17;
+            this.btnThoat.Text = "&Thoát";
+            this.btnThoat.UseVisualStyleBackColor = true;
             // 
             // splitContainer1
             // 
@@ -192,11 +211,12 @@ namespace EDCZONE
             this.splitContainer1.Panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.splitContainer1.Panel1.Controls.Add(this.label1);
             this.splitContainer1.Panel1.Controls.Add(this.groupBox1);
+            this.splitContainer1.Panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.splitContainer1_Panel1_Paint);
             // 
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.splitContainer1.Panel2.Controls.Add(this.label21);
+            this.splitContainer1.Panel2.Controls.Add(this.tlbBangChu);
             this.splitContainer1.Panel2.Controls.Add(this.label18);
             this.splitContainer1.Panel2.Controls.Add(this.textTongTien);
             this.splitContainer1.Panel2.Controls.Add(this.groupBox2);
@@ -226,7 +246,7 @@ namespace EDCZONE
             this.groupBox1.Controls.Add(this.cboMaNCC);
             this.groupBox1.Controls.Add(this.cboMaNV);
             this.groupBox1.Controls.Add(this.txtTenNV);
-            this.groupBox1.Controls.Add(this.txtSoHDB);
+            this.groupBox1.Controls.Add(this.txtSoHDN);
             this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.label7);
@@ -280,6 +300,7 @@ namespace EDCZONE
             this.cboMaNCC.Name = "cboMaNCC";
             this.cboMaNCC.Size = new System.Drawing.Size(236, 33);
             this.cboMaNCC.TabIndex = 14;
+          
             // 
             // cboMaNV
             // 
@@ -288,6 +309,7 @@ namespace EDCZONE
             this.cboMaNV.Name = "cboMaNV";
             this.cboMaNV.Size = new System.Drawing.Size(236, 33);
             this.cboMaNV.TabIndex = 13;
+           
             // 
             // txtTenNV
             // 
@@ -296,12 +318,12 @@ namespace EDCZONE
             this.txtTenNV.Size = new System.Drawing.Size(236, 32);
             this.txtTenNV.TabIndex = 9;
             // 
-            // txtSoHDB
+            // txtSoHDN
             // 
-            this.txtSoHDB.Location = new System.Drawing.Point(158, 42);
-            this.txtSoHDB.Name = "txtSoHDB";
-            this.txtSoHDB.Size = new System.Drawing.Size(239, 32);
-            this.txtSoHDB.TabIndex = 8;
+            this.txtSoHDN.Location = new System.Drawing.Point(158, 42);
+            this.txtSoHDN.Name = "txtSoHDN";
+            this.txtSoHDN.Size = new System.Drawing.Size(239, 32);
+            this.txtSoHDN.TabIndex = 8;
             // 
             // label9
             // 
@@ -391,16 +413,16 @@ namespace EDCZONE
             this.label2.TabIndex = 0;
             this.label2.Text = "Mã hóa đơn ";
             // 
-            // label21
+            // tlbBangChu
             // 
-            this.label21.AutoSize = true;
-            this.label21.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label21.Location = new System.Drawing.Point(445, 329);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(99, 22);
-            this.label21.TabIndex = 15;
-            this.label21.Text = "Bằng chữ: ";
+            this.tlbBangChu.AutoSize = true;
+            this.tlbBangChu.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tlbBangChu.ForeColor = System.Drawing.Color.DarkBlue;
+            this.tlbBangChu.Location = new System.Drawing.Point(445, 329);
+            this.tlbBangChu.Name = "tlbBangChu";
+            this.tlbBangChu.Size = new System.Drawing.Size(99, 22);
+            this.tlbBangChu.TabIndex = 15;
+            this.tlbBangChu.Text = "Bằng chữ: ";
             // 
             // label18
             // 
@@ -434,7 +456,7 @@ namespace EDCZONE
             this.groupBox2.Controls.Add(this.txtTongTien);
             this.groupBox2.Controls.Add(this.label17);
             this.groupBox2.Controls.Add(this.label16);
-            this.groupBox2.Controls.Add(this.dataGridView_HDB);
+            this.groupBox2.Controls.Add(this.dataGridView_HDN);
             this.groupBox2.Controls.Add(this.txtDonGia);
             this.groupBox2.Controls.Add(this.txtGiamGia);
             this.groupBox2.Controls.Add(this.txtSoLuong);
@@ -572,23 +594,23 @@ namespace EDCZONE
             this.label16.TabIndex = 21;
             this.label16.Text = "Kích đúp 1 dòng hàng để xóa";
             // 
-            // dataGridView_HDB
+            // dataGridView_HDN
             // 
-            this.dataGridView_HDB.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView_HDB.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView_HDB.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridView_HDN.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView_HDN.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView_HDN.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.MaSP,
             this.TenGD,
             this.SoLuong,
             this.DonGiaBan,
             this.GiamGia,
             this.ThanhTien});
-            this.dataGridView_HDB.Location = new System.Drawing.Point(0, 140);
-            this.dataGridView_HDB.Name = "dataGridView_HDB";
-            this.dataGridView_HDB.RowHeadersWidth = 51;
-            this.dataGridView_HDB.RowTemplate.Height = 24;
-            this.dataGridView_HDB.Size = new System.Drawing.Size(939, 164);
-            this.dataGridView_HDB.TabIndex = 20;
+            this.dataGridView_HDN.Location = new System.Drawing.Point(0, 140);
+            this.dataGridView_HDN.Name = "dataGridView_HDN";
+            this.dataGridView_HDN.RowHeadersWidth = 51;
+            this.dataGridView_HDN.RowTemplate.Height = 24;
+            this.dataGridView_HDN.Size = new System.Drawing.Size(939, 164);
+            this.dataGridView_HDN.TabIndex = 20;
             // 
             // MaSP
             // 
@@ -674,6 +696,7 @@ namespace EDCZONE
             this.cboMaSP.Name = "cboMaSP";
             this.cboMaSP.Size = new System.Drawing.Size(156, 33);
             this.cboMaSP.TabIndex = 14;
+          
             // 
             // label15
             // 
@@ -750,6 +773,7 @@ namespace EDCZONE
             this.Controls.Add(this.panel1);
             this.Name = "FrmHoaDonNhapHang";
             this.Text = "FrmHoaDonNhapHang";
+            this.Load += new System.EventHandler(this.FrmHoaDonNhapHang_Load);
             this.panel1.ResumeLayout(false);
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel1.PerformLayout();
@@ -761,7 +785,7 @@ namespace EDCZONE
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_HDB)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_HDN)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -782,7 +806,7 @@ namespace EDCZONE
         private System.Windows.Forms.TextBox txtTongTien;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.DataGridView dataGridView_HDB;
+        private System.Windows.Forms.DataGridView dataGridView_HDN;
         private System.Windows.Forms.DataGridViewTextBoxColumn MaSP;
         private System.Windows.Forms.DataGridViewTextBoxColumn TenGD;
         private System.Windows.Forms.DataGridViewTextBoxColumn SoLuong;
@@ -809,7 +833,7 @@ namespace EDCZONE
         private System.Windows.Forms.ComboBox cboMaNCC;
         private System.Windows.Forms.ComboBox cboMaNV;
         private System.Windows.Forms.TextBox txtTenNV;
-        private System.Windows.Forms.TextBox txtSoHDB;
+        private System.Windows.Forms.TextBox txtSoHDN;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
@@ -818,14 +842,15 @@ namespace EDCZONE
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.Label tlbBangChu;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.TextBox textTongTien;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnLuuHD;
+        private System.Windows.Forms.Button btnXoaHĐ;
+        private System.Windows.Forms.Button btnThemHĐ;
+        private System.Windows.Forms.Button btnInHĐ;
+        private System.Windows.Forms.Button btnSua;
+        private System.Windows.Forms.Button btnThoat;
     }
 }

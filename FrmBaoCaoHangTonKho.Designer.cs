@@ -31,15 +31,15 @@ namespace EDCZONE
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtMaNCC = new System.Windows.Forms.TextBox();
+            this.txtMoTa = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtTenSP = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.txtDiaChi = new System.Windows.Forms.TextBox();
-            this.txtTenKH = new System.Windows.Forms.TextBox();
-            this.txtTenNV = new System.Windows.Forms.TextBox();
-            this.txtSoHDB = new System.Windows.Forms.TextBox();
+            this.txtDVT = new System.Windows.Forms.TextBox();
+            this.txtSoLuong = new System.Windows.Forms.TextBox();
+            this.txtDonGia = new System.Windows.Forms.TextBox();
+            this.txtMaSP = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -47,21 +47,16 @@ namespace EDCZONE
             this.label2 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.button6 = new System.Windows.Forms.Button();
+            this.btnBaoCao = new System.Windows.Forms.Button();
+            this.btnThoat = new System.Windows.Forms.Button();
             this.btnIn = new System.Windows.Forms.Button();
             this.btnSua = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.MaSP = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TenSP = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DonGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TongTon = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CoTheBan = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DVT = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgv_BaoCao = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_BaoCao)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -77,15 +72,15 @@ namespace EDCZONE
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.groupBox1.Controls.Add(this.textBox1);
-            this.groupBox1.Controls.Add(this.textBox3);
+            this.groupBox1.Controls.Add(this.txtMaNCC);
+            this.groupBox1.Controls.Add(this.txtMoTa);
             this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.textBox2);
+            this.groupBox1.Controls.Add(this.txtTenSP);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.txtDiaChi);
-            this.groupBox1.Controls.Add(this.txtTenKH);
-            this.groupBox1.Controls.Add(this.txtTenNV);
-            this.groupBox1.Controls.Add(this.txtSoHDB);
+            this.groupBox1.Controls.Add(this.txtDVT);
+            this.groupBox1.Controls.Add(this.txtSoLuong);
+            this.groupBox1.Controls.Add(this.txtDonGia);
+            this.groupBox1.Controls.Add(this.txtMaSP);
             this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.label6);
@@ -100,19 +95,19 @@ namespace EDCZONE
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin chi tiết";
             // 
-            // textBox1
+            // txtMaNCC
             // 
-            this.textBox1.Location = new System.Drawing.Point(624, 41);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(106, 32);
-            this.textBox1.TabIndex = 25;
+            this.txtMaNCC.Location = new System.Drawing.Point(624, 41);
+            this.txtMaNCC.Name = "txtMaNCC";
+            this.txtMaNCC.Size = new System.Drawing.Size(106, 32);
+            this.txtMaNCC.TabIndex = 25;
             // 
-            // textBox3
+            // txtMoTa
             // 
-            this.textBox3.Location = new System.Drawing.Point(779, 41);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(81, 32);
-            this.textBox3.TabIndex = 24;
+            this.txtMoTa.Location = new System.Drawing.Point(779, 41);
+            this.txtMoTa.Name = "txtMoTa";
+            this.txtMoTa.Size = new System.Drawing.Size(81, 32);
+            this.txtMoTa.TabIndex = 24;
             // 
             // label4
             // 
@@ -125,12 +120,12 @@ namespace EDCZONE
             this.label4.TabIndex = 23;
             this.label4.Text = "Lỗi";
             // 
-            // textBox2
+            // txtTenSP
             // 
-            this.textBox2.Location = new System.Drawing.Point(158, 77);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(239, 32);
-            this.textBox2.TabIndex = 22;
+            this.txtTenSP.Location = new System.Drawing.Point(158, 77);
+            this.txtTenSP.Name = "txtTenSP";
+            this.txtTenSP.Size = new System.Drawing.Size(239, 32);
+            this.txtTenSP.TabIndex = 22;
             // 
             // label1
             // 
@@ -143,33 +138,33 @@ namespace EDCZONE
             this.label1.TabIndex = 21;
             this.label1.Text = "Tên sản phẩm";
             // 
-            // txtDiaChi
+            // txtDVT
             // 
-            this.txtDiaChi.Location = new System.Drawing.Point(624, 119);
-            this.txtDiaChi.Name = "txtDiaChi";
-            this.txtDiaChi.Size = new System.Drawing.Size(236, 32);
-            this.txtDiaChi.TabIndex = 19;
+            this.txtDVT.Location = new System.Drawing.Point(624, 119);
+            this.txtDVT.Name = "txtDVT";
+            this.txtDVT.Size = new System.Drawing.Size(236, 32);
+            this.txtDVT.TabIndex = 19;
             // 
-            // txtTenKH
+            // txtSoLuong
             // 
-            this.txtTenKH.Location = new System.Drawing.Point(624, 80);
-            this.txtTenKH.Name = "txtTenKH";
-            this.txtTenKH.Size = new System.Drawing.Size(236, 32);
-            this.txtTenKH.TabIndex = 18;
+            this.txtSoLuong.Location = new System.Drawing.Point(624, 80);
+            this.txtSoLuong.Name = "txtSoLuong";
+            this.txtSoLuong.Size = new System.Drawing.Size(236, 32);
+            this.txtSoLuong.TabIndex = 18;
             // 
-            // txtTenNV
+            // txtDonGia
             // 
-            this.txtTenNV.Location = new System.Drawing.Point(158, 118);
-            this.txtTenNV.Name = "txtTenNV";
-            this.txtTenNV.Size = new System.Drawing.Size(239, 32);
-            this.txtTenNV.TabIndex = 9;
+            this.txtDonGia.Location = new System.Drawing.Point(158, 118);
+            this.txtDonGia.Name = "txtDonGia";
+            this.txtDonGia.Size = new System.Drawing.Size(239, 32);
+            this.txtDonGia.TabIndex = 9;
             // 
-            // txtSoHDB
+            // txtMaSP
             // 
-            this.txtSoHDB.Location = new System.Drawing.Point(158, 42);
-            this.txtSoHDB.Name = "txtSoHDB";
-            this.txtSoHDB.Size = new System.Drawing.Size(239, 32);
-            this.txtSoHDB.TabIndex = 8;
+            this.txtMaSP.Location = new System.Drawing.Point(158, 42);
+            this.txtMaSP.Name = "txtMaSP";
+            this.txtMaSP.Size = new System.Drawing.Size(239, 32);
+            this.txtMaSP.TabIndex = 8;
             // 
             // label8
             // 
@@ -234,11 +229,13 @@ namespace EDCZONE
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(951, 96);
             this.panel2.TabIndex = 1;
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.panel3.Controls.Add(this.button6);
+            this.panel3.Controls.Add(this.btnBaoCao);
+            this.panel3.Controls.Add(this.btnThoat);
             this.panel3.Controls.Add(this.btnIn);
             this.panel3.Controls.Add(this.btnSua);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
@@ -247,18 +244,34 @@ namespace EDCZONE
             this.panel3.Size = new System.Drawing.Size(951, 72);
             this.panel3.TabIndex = 1;
             // 
-            // button6
+            // btnBaoCao
             // 
-            this.button6.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.ForeColor = System.Drawing.Color.DarkBlue;
-            this.button6.Image = global::EDCZONE.Properties.Resources.s_cancel1;
-            this.button6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button6.Location = new System.Drawing.Point(462, 23);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(108, 37);
-            this.button6.TabIndex = 11;
-            this.button6.Text = "&Thoát";
-            this.button6.UseVisualStyleBackColor = true;
+            this.btnBaoCao.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBaoCao.ForeColor = System.Drawing.Color.DarkBlue;
+            this.btnBaoCao.Image = global::EDCZONE.Properties.Resources.view_report;
+            this.btnBaoCao.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnBaoCao.Location = new System.Drawing.Point(44, 19);
+            this.btnBaoCao.Name = "btnBaoCao";
+            this.btnBaoCao.Size = new System.Drawing.Size(137, 37);
+            this.btnBaoCao.TabIndex = 12;
+            this.btnBaoCao.Text = "&Báo Cáo";
+            this.btnBaoCao.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnBaoCao.UseVisualStyleBackColor = true;
+            this.btnBaoCao.Click += new System.EventHandler(this.btnBaoCao_Click);
+            // 
+            // btnThoat
+            // 
+            this.btnThoat.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThoat.ForeColor = System.Drawing.Color.DarkBlue;
+            this.btnThoat.Image = global::EDCZONE.Properties.Resources.s_cancel1;
+            this.btnThoat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnThoat.Location = new System.Drawing.Point(627, 19);
+            this.btnThoat.Name = "btnThoat";
+            this.btnThoat.Size = new System.Drawing.Size(125, 37);
+            this.btnThoat.TabIndex = 11;
+            this.btnThoat.Text = "&Thoát";
+            this.btnThoat.UseVisualStyleBackColor = true;
+            this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
             // btnIn
             // 
@@ -266,13 +279,14 @@ namespace EDCZONE
             this.btnIn.ForeColor = System.Drawing.Color.DarkBlue;
             this.btnIn.Image = global::EDCZONE.Properties.Resources.b_save;
             this.btnIn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnIn.Location = new System.Drawing.Point(268, 23);
+            this.btnIn.Location = new System.Drawing.Point(433, 19);
             this.btnIn.Name = "btnIn";
-            this.btnIn.Size = new System.Drawing.Size(135, 37);
+            this.btnIn.Size = new System.Drawing.Size(147, 37);
             this.btnIn.TabIndex = 9;
             this.btnIn.Text = "&In Báo Cáo";
             this.btnIn.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnIn.UseVisualStyleBackColor = true;
+            this.btnIn.Click += new System.EventHandler(this.btnIn_Click);
             // 
             // btnSua
             // 
@@ -280,72 +294,26 @@ namespace EDCZONE
             this.btnSua.ForeColor = System.Drawing.Color.DarkBlue;
             this.btnSua.Image = global::EDCZONE.Properties.Resources.add_point_on;
             this.btnSua.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSua.Location = new System.Drawing.Point(54, 23);
+            this.btnSua.Location = new System.Drawing.Point(219, 19);
             this.btnSua.Name = "btnSua";
-            this.btnSua.Size = new System.Drawing.Size(158, 37);
+            this.btnSua.Size = new System.Drawing.Size(174, 37);
             this.btnSua.TabIndex = 7;
             this.btnSua.Text = "&Sửa Báo Cáo";
             this.btnSua.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnSua.UseVisualStyleBackColor = true;
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
-            // dataGridView1
+            // dgv_BaoCao
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.MaSP,
-            this.TenSP,
-            this.DonGia,
-            this.TongTon,
-            this.CoTheBan,
-            this.DVT});
-            this.dataGridView1.Location = new System.Drawing.Point(54, 117);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 62;
-            this.dataGridView1.RowTemplate.Height = 28;
-            this.dataGridView1.Size = new System.Drawing.Size(879, 242);
-            this.dataGridView1.TabIndex = 2;
-            // 
-            // MaSP
-            // 
-            this.MaSP.HeaderText = "Mã SP";
-            this.MaSP.MinimumWidth = 8;
-            this.MaSP.Name = "MaSP";
-            this.MaSP.Width = 150;
-            // 
-            // TenSP
-            // 
-            this.TenSP.HeaderText = "Tên SP";
-            this.TenSP.MinimumWidth = 8;
-            this.TenSP.Name = "TenSP";
-            this.TenSP.Width = 150;
-            // 
-            // DonGia
-            // 
-            this.DonGia.HeaderText = "Đơn Giá";
-            this.DonGia.MinimumWidth = 8;
-            this.DonGia.Name = "DonGia";
-            this.DonGia.Width = 150;
-            // 
-            // TongTon
-            // 
-            this.TongTon.HeaderText = "Tổng Tồn";
-            this.TongTon.MinimumWidth = 8;
-            this.TongTon.Name = "TongTon";
-            this.TongTon.Width = 150;
-            // 
-            // CoTheBan
-            // 
-            this.CoTheBan.HeaderText = "Có thể bán";
-            this.CoTheBan.MinimumWidth = 8;
-            this.CoTheBan.Name = "CoTheBan";
-            this.CoTheBan.Width = 150;
-            // 
-            // DVT
-            // 
-            this.DVT.HeaderText = "ĐVT";
-            this.DVT.MinimumWidth = 8;
-            this.DVT.Name = "DVT";
-            this.DVT.Width = 150;
+            this.dgv_BaoCao.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_BaoCao.Location = new System.Drawing.Point(54, 117);
+            this.dgv_BaoCao.Name = "dgv_BaoCao";
+            this.dgv_BaoCao.RowHeadersWidth = 62;
+            this.dgv_BaoCao.RowTemplate.Height = 28;
+            this.dgv_BaoCao.Size = new System.Drawing.Size(879, 242);
+            this.dgv_BaoCao.TabIndex = 2;
+            this.dgv_BaoCao.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_BaoCao_CellClick);
+            this.dgv_BaoCao.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_BaoCao_CellContentClick);
             // 
             // FrmBaoCaoHangTonKho
             // 
@@ -353,17 +321,18 @@ namespace EDCZONE
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(951, 617);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgv_BaoCao);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "FrmBaoCaoHangTonKho";
             this.Text = "FrmBaoCaoHangTonKho";
+            this.Load += new System.EventHandler(this.FrmBaoCaoHangTonKho_Load);
             this.panel1.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_BaoCao)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -372,31 +341,26 @@ namespace EDCZONE
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgv_BaoCao;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtMaNCC;
+        private System.Windows.Forms.TextBox txtMoTa;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtTenSP;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtDiaChi;
-        private System.Windows.Forms.TextBox txtTenKH;
-        private System.Windows.Forms.TextBox txtTenNV;
-        private System.Windows.Forms.TextBox txtSoHDB;
+        private System.Windows.Forms.TextBox txtDVT;
+        private System.Windows.Forms.TextBox txtSoLuong;
+        private System.Windows.Forms.TextBox txtDonGia;
+        private System.Windows.Forms.TextBox txtMaSP;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn MaSP;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TenSP;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DonGia;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TongTon;
-        private System.Windows.Forms.DataGridViewTextBoxColumn CoTheBan;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DVT;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button btnThoat;
         private System.Windows.Forms.Button btnIn;
         private System.Windows.Forms.Button btnSua;
+        private System.Windows.Forms.Button btnBaoCao;
     }
 }
